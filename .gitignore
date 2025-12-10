@@ -1,0 +1,8 @@
+# directories
+**/.terraform/
+
+# files
+**/.env*
+
+**/terraform.tfvars
+**/terraform.tfstate*
