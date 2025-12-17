@@ -58,9 +58,14 @@ resource "cloudflare_pages_project" "main" {
     }
 }
 
+locals {
+  app_subdomain = "app"
+  app_domain_name = "${local.app_subdomain}.${var.domain_name}"
+}
+
 resource "cloudflare_pages_domain" "main" {
   account_id = var.account_id
-  name = var.domain_name
+  name = local.app_domain_name
   project_name = cloudflare_pages_project.main.name
 }
 
@@ -77,7 +82,7 @@ locals {
 }
 
 resource "cloudflare_dns_record" "app" {
-    name = "app"
+    name = local.app_subdomain
     ttl = local.ttl
     type = local.type
     zone_id = data.cloudflare_zone.main.id
