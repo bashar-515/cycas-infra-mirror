@@ -1,7 +1,7 @@
 resource "render_static_site" "main" {
     branch = "main"
     build_command = "npm run build"
-    name = "cycas web app"
+    name = "cycas app"
     repo_url = "https://github.com/bashar-515/cycas-web"
 
     auto_deploy = true
