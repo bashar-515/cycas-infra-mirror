@@ -2,7 +2,7 @@
 **/.terraform/
 
 # files
-**/.env*
+**/.env
 
 **/terraform.tfvars
 **/terraform.tfstate*
