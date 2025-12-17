@@ -20,5 +20,20 @@ resource "render_static_site" "main" {
       { name: "app.cycas.dev" },
     ]
 
+    env_vars = {
+      VITE_AUTHORITY = {
+        value = "https://cycas-xr5tso.us1.zitadel.cloud"
+      }
+      VITE_CLIENT_ID = {
+        value = "340202547190987480"
+      }
+      VITE_REDIRECT_URI = {
+        value = "https://app.cycas.dev"
+      }
+      POST_LOGOUT_REDIRECT_URI = {
+        value = "https://app.cycas.dev"
+      }
+    }
+
     publish_path = "dist"
 }
