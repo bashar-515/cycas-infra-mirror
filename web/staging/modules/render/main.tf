@@ -2,17 +2,21 @@ resource "render_static_site" "main" {
     branch = "main"
     build_command = "npm run build"
     name = "cycas app"
-    repo_url = "https://github.com/bashar-515/cycas-web"
+    repo_url = "https://github.com/bashar-515/cycas-app"
 
     auto_deploy = true
 
     build_filter = {
       paths = [
-        "src/**",
-         "index.html",
-         "package.json",
-         "package-lock.json",
-         "tsconfig.json",
+        "web/**",
+        "index.html",
+        "package.json",
+        "package-lock.json",
+        "svelte.config.js",
+        "tsconfig.app.json",
+        "tsconfig.json",
+        "tsconfig.node.json",
+        "vite.config.ts",
       ]
     }
 
