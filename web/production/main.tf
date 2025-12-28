@@ -44,16 +44,20 @@ resource "cloudflare_pages_project" "main" {
         owner = "bashar-515"
 
         path_includes = [
-          "src/**",
-         "index.html",
-         "package.json",
-         "package-lock.json",
-         "tsconfig.json",
+          "web/**",
+          "index.html",
+          "package.json",
+          "package-lock.json",
+          "svelte.config.js",
+          "tsconfig.app.json",
+          "tsconfig.json",
+          "tsconfig.node.json",
+          "vite.config.ts",
         ]
 
         production_branch = "main"
         production_deployments_enabled = true
-        repo_name = "cycas-web"
+        repo_name = "cycas-app"
       }
     }
 }
