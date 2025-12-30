@@ -13,21 +13,25 @@ resource "cloudflare_pages_project" "main" {
         fail_open = false
 
         env_vars = {
-          VITE_AUTHORITY = {
+          VITE_OIDC_AUTHORITY = {
             type = "plain_text"
-            value = "https://cycas-xr5tso.us1.zitadel.cloud"
+            value = ""
           }
-          VITE_CLIENT_ID = {
+          VITE_OIDC_CLIENT_ID = {
             type = "plain_text"
-            value = "340202806600350793"
+            value = ""
           }
-          VITE_REDIRECT_URI = {
+          VITE_OIDC_REDIRECT_URI = {
             type = "plain_text"
-            value = "https://app.cycas.me"
+            value = ""
           }
-          POST_LOGOUT_REDIRECT_URI = {
+          VITE_OIDC_POST_LOGOUT_REDIRECT_URI = {
             type = "plain_text"
-            value = "https://app.cycas.me"
+            value = ""
+          }
+          VITE_OIDC_USERINFO_ENDPOINT = {
+            type = "plain_text"
+            value = ""
           }
         }
       }
