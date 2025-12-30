@@ -42,5 +42,5 @@ resource "render_static_site" "main" {
       }
     }
 
-    publish_path = "dist"
+    publish_path = "build"
 }

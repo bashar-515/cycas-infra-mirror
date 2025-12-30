@@ -5,7 +5,7 @@ resource "cloudflare_pages_project" "main" {
 
     build_config = {
       build_command = "npm run build"
-      destination_dir = "dist"
+      destination_dir = "build"
     }
 
     deployment_configs = {
