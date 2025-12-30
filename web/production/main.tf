@@ -48,14 +48,19 @@ resource "cloudflare_pages_project" "main" {
         owner = "bashar-515"
 
         path_includes = [
-          "web/**",
-          "index.html",
+          "e2e/**",
+          "src/**",
+          "static/**",
+          ".npmrc",
+          ".prettierignore",
+          ".prettierrc",
+          "eslint.config.js",
           "package.json",
-          "package-lock.json",
+          "playwright.config.ts",
+          "pnpm-lock.yaml",
+          "pnpm-workspace.yaml",
           "svelte.config.js",
-          "tsconfig.app.json",
           "tsconfig.json",
-          "tsconfig.node.json",
           "vite.config.ts",
         ]
 
