@@ -30,20 +30,17 @@ resource "render_static_site" "main" {
     ]
 
     env_vars = {
-      VITE_OIDC_AUTHORITY = {
+      PUBLIC_OIDC_AUTHORITY = {
         value = "https://cycas-instance-rff81g.us1.zitadel.cloud"
       }
-      VITE_OIDC_CLIENT_ID = {
+      PUBLIC_OIDC_CLIENT_ID = {
         value = "353278728903597183"
       }
-      VITE_OIDC_REDIRECT_URI = {
+      PUBLIC_OIDC_REDIRECT_URI = {
         value = "https://app.cycas.dev/callback"
       }
-      VITE_OIDC_POST_LOGOUT_REDIRECT_URI = {
+      PUBLIC_OIDC_POST_LOGOUT_REDIRECT_URI = {
         value = "https://app.cycas.dev"
-      }
-      VITE_OIDC_USERINFO_ENDPOINT = {
-        value = "https://cycas-instance-rff81g.us1.zitadel.cloud/oidc/v1/userinfo"
       }
     }
 
